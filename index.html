@@ -1,71 +1,124 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Gallery Management</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelier | Art Gallery</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Art Gallery Management</h1>
-        <p>Artist Profiles & Artwork Records</p>
-    </header>
+<nav class="navbar">
+    <a class="logo" href="#home">atelier<span>.</span></a>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#featured">Gallery</a>
+        <a href="#management">Management</a>
+    </div>
+    <a class="nav-button" href="#featured">Explore Gallery ↗</a>
+</nav>
 
+<header class="hero" id="home">
+    <div class="hero-content">
+        <p class="eyebrow">A SPACE FOR ART AND CREATIVITY</p>
+        <h1>Where art tells<br>its own <em>story.</em></h1>
+        <p class="hero-description">Discover beautiful creations, meet talented artists and explore a collection of inspiring artwork.</p>
+        <a href="#featured" class="primary-button">Explore artworks ↗</a>
+    </div>
+    <div class="hero-art">
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1000" alt="Gallery artwork">
+        <div class="floating-note">✳ &nbsp; Art is a journey<br>&nbsp;&nbsp;&nbsp;&nbsp; of imagination.</div>
+    </div>
+    <div class="hero-bottom">
+        <span>EST. 2026</span><span>ART · PEOPLE · STORIES</span><span>SCROLL TO EXPLORE ↓</span>
+    </div>
+</header>
+
+<section class="featured" id="featured">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">CURATED WITH CREATIVITY</p>
+            <h2>Featured <em>artworks.</em></h2>
+        </div>
+        <p class="section-description">A little collection of creativity, colour and imagination.</p>
+    </div>
+    <div class="artwork-grid">
+        <article class="artwork-card">
+            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=800" alt="Abstract art">
+            <div><h3>Colours of Life</h3><p>Abstract Painting</p></div>
+        </article>
+        <article class="artwork-card">
+            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800" alt="Classical painting">
+            <div><h3>Timeless Beauty</h3><p>Fine Art</p></div>
+        </article>
+        <article class="artwork-card">
+            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800" alt="Modern art">
+            <div><h3>Silent Expressions</h3><p>Modern Art</p></div>
+        </article>
+    </div>
+</section>
+
+<section class="management" id="management">
+    <div class="management-heading">
+        <p class="eyebrow">BEHIND THE GALLERY</p>
+        <h2>Manage the <em>collection.</em></h2>
+        <p>Organise artist profiles and artwork records in one place.</p>
+    </div>
     <main>
         <section class="card">
-            <h2>Artist Profiles</h2>
-
+            <div class="card-heading">
+                <span class="card-number">01 / ARTISTS</span>
+                <h2>Artist Profiles</h2>
+                <p>Get to know the creative minds behind the art.</p>
+            </div>
             <form id="artistForm">
-                <input type="text" id="artistName"
-                    placeholder="Artist Name" required>
-
-                <input type="email" id="artistEmail"
-                    placeholder="Email" required>
-
-                <input type="tel" id="artistPhone"
-                    placeholder="Phone Number">
-
-                <textarea id="artistBio"
-                    placeholder="Artist Biography"></textarea>
-
-                <button type="submit">Add Artist</button>
+                <label for="artistName">Artist name</label>
+                <input type="text" id="artistName" placeholder="Enter artist name" required>
+                <label for="artistEmail">Email address</label>
+                <input type="email" id="artistEmail" placeholder="Enter email" required>
+                <label for="artistPhone">Phone number</label>
+                <input type="tel" id="artistPhone" placeholder="Enter phone number">
+                <label for="artistBio">Artist biography</label>
+                <textarea id="artistBio" placeholder="Write a short biography"></textarea>
+                <button type="submit">+ Add Artist</button>
             </form>
-
-            <h3>Artist List</h3>
+            <div class="list-heading"><h3>Artist List</h3><span>COLLECTION</span></div>
             <div id="artistList"></div>
         </section>
 
         <section class="card">
-            <h2>Artwork Records</h2>
-
+            <div class="card-heading">
+                <span class="card-number">02 / ARTWORKS</span>
+                <h2>Artwork Records</h2>
+                <p>Keep track of every creation in the gallery.</p>
+            </div>
             <form id="artworkForm">
-                <input type="text" id="artworkName"
-                    placeholder="Artwork Name" required>
-
+                <label for="artworkName">Artwork name</label>
+                <input type="text" id="artworkName" placeholder="Enter artwork name" required>
+                <label for="artworkArtist">Created by</label>
                 <select id="artworkArtist" required>
                     <option value="">Select Artist</option>
                 </select>
-
-                <input type="text" id="artworkCategory"
-                    placeholder="Category (Painting, Sculpture...)">
-
-                <input type="number" id="artworkPrice"
-                    placeholder="Price" min="0" step="0.01">
-
-                <textarea id="artworkDescription"
-                    placeholder="Artwork Description"></textarea>
-
-                <button type="submit">Add Artwork</button>
+                <label for="artworkCategory">Category</label>
+                <input type="text" id="artworkCategory" placeholder="Painting, Sculpture...">
+                <label for="artworkPrice">Artwork price</label>
+                <input type="number" id="artworkPrice" placeholder="Enter price" min="0" step="0.01">
+                <label for="artworkDescription">Description</label>
+                <textarea id="artworkDescription" placeholder="Describe the artwork"></textarea>
+                <button type="submit">+ Add Artwork</button>
             </form>
-
-            <h3>Artwork List</h3>
+            <div class="list-heading"><h3>Artwork List</h3><span>COLLECTION</span></div>
             <div id="artworkList"></div>
         </section>
     </main>
+</section>
 
-    <script src="script.js"></script>
+<footer>
+    <a class="logo" href="#home">atelier<span>.</span></a>
+    <p>A little space for a lot of creativity.</p>
+    <span>© 2026 ART GALLERY</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
