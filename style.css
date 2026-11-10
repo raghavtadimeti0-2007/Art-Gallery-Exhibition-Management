@@ -1,0 +1,111 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #222;
+}
+
+header {
+    background: #25213b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000015;
+}
+
+h2, h3 {
+    margin-bottom: 18px;
+    color: #25213b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    background: #51418b;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #372b68;
+}
+
+.record {
+    background: #f7f7fb;
+    border: 1px solid #e2e2eb;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.record p {
+    margin: 7px 0;
+}
+
+.record button {
+    margin: 8px 5px 0 0;
+    padding: 8px 12px;
+}
+
+.delete {
+    background: #c0392b;
+}
+
+.delete:hover {
+    background: #922b21;
+}
+
+@media (max-width: 750px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}

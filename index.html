@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Art Gallery Management</h1>
+        <p>Artist Profiles & Artwork Records</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Artist Profiles</h2>
+
+            <form id="artistForm">
+                <input type="text" id="artistName"
+                    placeholder="Artist Name" required>
+
+                <input type="email" id="artistEmail"
+                    placeholder="Email" required>
+
+                <input type="tel" id="artistPhone"
+                    placeholder="Phone Number">
+
+                <textarea id="artistBio"
+                    placeholder="Artist Biography"></textarea>
+
+                <button type="submit">Add Artist</button>
+            </form>
+
+            <h3>Artist List</h3>
+            <div id="artistList"></div>
+        </section>
+
+        <section class="card">
+            <h2>Artwork Records</h2>
+
+            <form id="artworkForm">
+                <input type="text" id="artworkName"
+                    placeholder="Artwork Name" required>
+
+                <select id="artworkArtist" required>
+                    <option value="">Select Artist</option>
+                </select>
+
+                <input type="text" id="artworkCategory"
+                    placeholder="Category (Painting, Sculpture...)">
+
+                <input type="number" id="artworkPrice"
+                    placeholder="Price" min="0" step="0.01">
+
+                <textarea id="artworkDescription"
+                    placeholder="Artwork Description"></textarea>
+
+                <button type="submit">Add Artwork</button>
+            </form>
+
+            <h3>Artwork List</h3>
+            <div id="artworkList"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
