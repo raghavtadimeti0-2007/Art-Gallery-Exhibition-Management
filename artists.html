@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Management</title>
+
+    <link rel="stylesheet" href="member1.css">
+</head>
+<body>
+
+<header>
+    <h1>Art Gallery Management System</h1>
+    <h2>Artist Management</h2>
+    <p>
+    <a href="artists.html">Artists</a> |
+    <a href="artworks.html">Artworks</a>
+</p>
+</header>
+
+<div class="container">
+
+    <h2>Add New Artist</h2>
+
+    <form id="artistForm">
+        <input type="text" id="artistName" placeholder="Artist Name" required>
+        <input type="email" id="artistEmail" placeholder="Email" required>
+        <input type="tel" id="artistPhone" placeholder="Phone" required>
+        <input type="text" id="artistAddress" placeholder="Address" required>
+
+        <button type="submit">Add Artist</button>
+    </form>
+
+    <h2>Artist List</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="artistList"></tbody>
+    </table>
+
+</div>
+
+<script src="./member1.js"></script>
+</body>
+</html>
