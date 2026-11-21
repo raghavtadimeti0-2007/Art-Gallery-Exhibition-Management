@@ -1,0 +1,54 @@
+let ek1 = {
+    name: "Alice",
+    age: 30,
+    city: "New York"    
+}
+console.log(ek1.name);  
+console.log(ek1.age);
+console.log(ek1.city);
+//array
+let students = ["Alice", "Bob", "Charlie"];
+console.log(students[0]);
+console.log(students[1]);
+console.log(students[2]);
+students.pop();
+console.log(students);
+students.push("David");
+console.log(students);
+let numbers = [1, 2, 3, 4, 5];
+let evenNumbers = numbers.filter(function(num) {
+    return num % 2 === 0;
+});
+console.log(evenNumbers);
+
+const marks = [85, 92, 34, 76,28];
+marks.forEach(function(mark) {
+    console.log(mark);
+}
+const marks = [85, 92, 34, 76, 28];
+const bonusMarks = marks.map(function(mark) {
+    return mark + 5;
+});
+console.log(bonusMarks);
+let stud1 = "internet programming";
+let stud2 = "web development";
+let stud3 = "database management";
+let stud4 = "software engineering";
+let stud5 = "mobile app development";
+console.log(stud1); 
+console.log(stud2);
+console.log(stud3);
+console.log(stud4);
+console.log(stud5);
+console.log(Length of stud1: " + stud1.length); 
+console.log("Length of stud2: " + stud2.length);
+console.log("Length of stud3: " + stud3.length);
+console.log("Length of stud4: " + stud4.length);
+console.log("Length of stud5: " + stud5.length);
+console.log("Presence of H in stud1: " + stud1.includes("H"));
+console.log("Presence of H in stud2: " + stud2.includes("H"));
+console.log("Presence of H in stud3: " + stud3.includes("H"));
+console.log("Presence of H in stud4: " + stud4.includes("H"));
+console.log("Presence of H in stud5: " + stud5.includes("H"));
+console.log("length of stud1: " + stud1.length);
+console.log("Capital form of stud1: " + stud1.toUpperCase());
