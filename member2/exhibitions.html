@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibition Management</title>
+    <link rel="stylesheet" href="member2.css">
+</head>
+<body>
+
+<header>
+    <h1>Art Gallery Management System</h1>
+    <h2>Exhibition Management</h2>
+</header>
+
+<div class="container">
+    <h2>Add Exhibition</h2>
+
+    <form id="exhibitionForm">
+        <input type="text" id="exhibitionName" placeholder="Exhibition Name" required>
+        <input type="text" id="exhibitionTheme" placeholder="Theme" required>
+        <label>Start Date</label>
+        <input type="date" id="startDate" required>
+        <label>End Date</label>
+        <input type="date" id="endDate" required>
+        <textarea id="description" placeholder="Exhibition Description" required></textarea>
+        <button type="submit">Add Exhibition</button>
+    </form>
+
+    <h2>Exhibition List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Theme</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="exhibitionList"></tbody>
+    </table>
+</div>
+
+<script src="member2.js"></script>
+</body>
+</html>
